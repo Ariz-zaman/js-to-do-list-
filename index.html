@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to-do-list</title>
+    <title>Shoping list</title>
 </head>
 
 <body>
-    <h2>add your to do list here</h2>
+    <h2>add your shoping list here</h2>
     <form action="" id="myform">
         <input type="text" id="myinput">
-        <button>add</button>
+        <button>add list</button>
     </form>
     <h3>To do list here</h3>
     <ul id="myitem"></ul>
 
     <script>
-        var myForm = document.getElementById("myForm");
+        var myform = document.getElementById("myform");
 
-        var myInput = document.getElementById("myInput");
+        var myinput = document.getElementById("myinput");
 
-        var myItem = document.getElementById("myItem");
+        var myitem = document.getElementById("myitem");
 
         myForm.addEventListener("submit",
 
@@ -29,19 +29,19 @@
 
                 event.preventDefault()
 
-                createItem(myInput.value)
+                createItem(myinput.value)
 
             })
 
-        function createItem(inputItems) {
+        function createItem(inputitems) {
 
             var items = `<li>${inputItems} <button onclick="deleteElement(this)" > Delete </button> </li>`
 
-            myItem.insertAdjacentHTML("beforeend", items)
+            myitem.insertAdjacentHTML("beforeend", items)
 
-            myInput.value = ""
+            myinput.value = ""
 
-            myInput.focus()
+            myinput.focus()
 
         }
 
@@ -53,5 +53,6 @@
     </script>
 
 </body>
+
 
 </html>
